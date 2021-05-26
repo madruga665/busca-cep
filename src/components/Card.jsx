@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./styles/Card.css";
 
 export default class Card extends Component {
-  renderData = () => {
+  result = () => {
     const { data: { data } } = this.props
     const { cep, logradouro, complemento, bairro, localidade, uf } = data;
     return (
@@ -21,7 +21,8 @@ export default class Card extends Component {
 
     return( 
     <section className="card-container">
-      {data === undefined ? null : this.renderData()}
+      <h3>Resultado da busca</h3>
+      {data === undefined ? null : this.result()}
     </section>
     );
   }
