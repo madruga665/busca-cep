@@ -20,7 +20,7 @@ export default class Card extends Component {
     const { data } = this.props;
 
     return( 
-    <section className="card-container">
+    <section className="card-container" >
       <h3>Resultado da busca</h3>
       {data === undefined ? null : this.result()}
     </section>
