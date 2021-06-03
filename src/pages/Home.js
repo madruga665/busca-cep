@@ -33,7 +33,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <main className="home">
+      <main className="flex flex-col items-center justify-center">
         <Header />
         <Input
           handleChange={(value) => this.handleChange(value)}
