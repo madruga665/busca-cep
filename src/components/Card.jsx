@@ -9,21 +9,25 @@ export default class Card extends Component {
     const { cep, logradouro, bairro, localidade, uf, complemento } = data;
     return (
       <>
-        <div className="flex flex-col">
-          <span className="m-3 text-gray-600">Cep:</span>
-          <span className="m-3 text-gray-600">Logradouro:</span>
-          <span className="m-3 text-gray-600">Bairro:</span>
-          <span className="m-3 text-gray-600">Cidade:</span>
-          <span className="m-3 text-gray-600">Estado:</span>
-          <span className="m-3 text-gray-600">Complemento:</span>
-        </div>
-        <div className="flex flex-col items-end justify-items-center">
-          <span className="m-3 text-gray-600">{cep}</span>
-          <span className="m-3 text-gray-600">{logradouro}</span>
-          <span className="m-3 text-gray-600">{bairro}</span>
-          <span className="m-3 text-gray-600">{localidade}</span>
-          <span className="m-3 text-gray-600">{uf}</span>
-          <span className="m-3 text-gray-600">{complemento}</span>
+        <div className="flex flex-col relative w-full">
+          <div className="m-1 mb-3 text-gray-600 flex w-full">
+            Cep:<p className="absolute right-0">{cep}</p>
+          </div>
+          <div className="m-1 mb-3 text-gray-600 flex w-full">
+            Logradouro:<p className="absolute right-0">{logradouro}</p>
+          </div>
+          <div className="m-1 mb-3 text-gray-600 flex w-full">
+            Bairro:<p className="absolute right-0">{bairro}</p>
+          </div>
+          <div className="m-1 mb-3 text-gray-600 flex w-full">
+            Cidade:<p className="absolute right-0">{localidade}</p>
+          </div>
+          <div className="m-1 mb-3 text-gray-600 flex w-full">
+            Estado:<p className="absolute right-0">{uf}</p>
+          </div>
+          <div className="m-1 mb-3 text-gray-600 flex w-full">
+            Complemento:<p className="absolute right-0">{complemento}</p>
+          </div>
         </div>
       </>
     );
@@ -32,8 +36,10 @@ export default class Card extends Component {
     const { data } = this.props;
 
     return (
-      <section className="bg-yellow-200 w-1/2 md:min-w-0 flex flex-col items-center py-6 px-6 my-4 shadow-xl border-t-8 border-yellow-400 rounded-lg">
-        <h2 className="text-xl font-semibold mb-10 border-b-2 border-gray-600">Resultado da busca</h2>
+      <section className="bg-yellow-200 w-full sm:w-11/12 md:w-4/5 lg:w-2/5 xl:w-2/5 flex flex-col items-center py-6 px-3 my-4 shadow-xl border-t-8 border-yellow-400 rounded-lg">
+        <h2 className="text-xl font-semibold mb-10 border-b-2 border-gray-600">
+          Resultado da busca
+        </h2>
         <div className="flex flex-row justify-between w-full">
           {data === undefined ? null : this.result()}
         </div>
