@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "../components/Card";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Input from "../components/Input";
 
@@ -33,13 +34,14 @@ export default class Home extends Component {
 
   render() {
     return (
-      <main className="flex flex-col items-center justify-center">
+      <main className="flex flex-col items-center">
         <Header />
         <Input
           handleChange={(value) => this.handleChange(value)}
           handleSubmit={this.handleSubmit}
         />
         <Card data={this.state} />
+        <Footer />
       </main>
     );
   }
